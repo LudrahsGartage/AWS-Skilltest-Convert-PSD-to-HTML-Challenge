@@ -12,32 +12,32 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
     </head>
-    <body>
+    <body class="content" id="content">
         <!-- ***** Hero Section ***** -->
        <header class="header" role="banner" id="top">
         <nav class="nav" role="navigation">
-            <img src="" class="logo" id="logo"/>
+            <img src="images/Logo.png" class="logo" id="logo"/>
             <ol class="nav__items">
-                <li class="nav__item"><a href="#history" class="nav__link">History</a></li>
-                <li class="nav__item"><a href="#team" class="nav__link">Team</a></li>
+                <li class="nav__item"><a href="#history" class="nav__link"> 01. History</a></li>
+                <li class="nav__item"><a href="#team" class="nav__link"> 02. Team</a></li>
             </ol>
         </nav>
         </header>
 
         <!-- ***** Sticky Nav ***** -->
-        <section class="sticky-nav">
+        <section class="sticky-nav" id="sticky-nav">
             <nav class="nav" role="navigation">
-                <img src="" class="logo" id="logo"/>
+                <img src="images/Logo.png" class="logo" id="logo"/>
                 <ol class="nav__items">
-                    <li class="nav__item"><a href="#history" class="nav__link">History</a></li>
-                    <li class="nav__item"><a href="#team" class="nav__link">Team</a></li>
+                    <li class="nav__item"><a href="#history" class="nav__link primary-color"> 01. History</a></li>
+                    <li class="nav__item"><a href="#team" class="nav__link primary-color"> 02. Team</a></li>
                 </ol>
             </nav>
         </section>
 
         <!-- ***** History ***** -->
         <section class="history" id="history">
-            <div class = "section-information">
+            <div class = "section-information" id="history-section-information">
                 <div class="section-header">
                     <p class="section-number">01</p>
                     <h1 class="section-title">History</h1>
@@ -52,54 +52,49 @@
             </div>
             <div class="carousel">
                 <div class= "carousel-images" id = "carousel-one">
-                    <img src="" class="carousel-image"/>
-                    <img src="" class="carousel-image"/>
-                    <img src="" class="carousel-image"/>
-                    <img src="" class="carousel-image"/>
+                    <img src="images/slide1.png" class="carousel-image"/>
+                    <img src="images/slide2.png" class="carousel-image"/>
+                    <img src="images/slide3.png" class="carousel-image"/>
+                    <img src="images/slide4.png" class="carousel-image"/>
                 </div>
-                <div class= "carousel-images" id = "carousel-two">
-                    <img src="" class="carousel-image"/>
-                    <img src="" class="carousel-image"/>
-                    <img src="" class="carousel-image"/>
-                    <img src="" class="carousel-image"/>
+                <div class= "carousel-images invisible" id = "carousel-two">
+                    <img src="images/slide1.png" class="carousel-image"/>
+                    <img src="images/slide2.png" class="carousel-image"/>
+                    <img src="images/slide3.png" class="carousel-image"/>
+                    <img src="images/slide4.png" class="carousel-image"/>
                 </div>
-                <div class= "carousel-images" id = "carousel-three">
-                    <img src="" class="carousel-image"/>
-                    <img src="" class="carousel-image"/>
-                    <img src="" class="carousel-image"/>
-                    <img src="" class="carousel-image"/>
+                <div class= "carousel-images invisible" id = "carousel-three">
+                    <img src="images/slide1.png" class="carousel-image"/>
+                    <img src="images/slide2.png" class="carousel-image"/>
+                    <img src="images/slide3.png" class="carousel-image"/>
+                    <img src="images/slide4.png" class="carousel-image"/>
                 </div>
                 <div class="carousel-buttons">
-                    <span class="carousel-dots" id="dot-one">.</span>
-                    <span class="carousel-dots" id="dot-two">.</span>
-                    <span class="carousel-dots" id="dot-three">.</span>
+                    <button class="carousel-dots selected" id="dot-one" onclick="change_carousel(1)">1</button>
+                    <button class="carousel-dots unselected" id="dot-two" onclick="change_carousel(2)">2</button>
+                    <button class="carousel-dots unselected" id="dot-three" onclick="change_carousel(3)">3</button>
                 </div>
             </div>
         </section>
 
         <!-- ***** Team ***** -->
         <section class="team" id="team">
-            <div class = "section-information">
+            <div class = "section-information" id="team-section-information">
                 <div class="section-header">
-                    <p class="section-number">01</p>
-                    <h1 class="section-title">History</h1>
+                    <p class="section-number">02</p>
+                    <h1 class="section-title">Climb</h1>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam mollitia esse commodi
-                    debitis
-                    obcaecati. Pariatur ut saepe asperiores eveniet. Harum voluptatibus cupiditate tempora
-                    reprehenderit
-                    sint tenetur eaque, soluta maiores.Nam soluta optio repudiandae quis omnis iure officiis totam
-                    iste
+                <p>Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. 
                 </p>
             </div>
 
             <div class="tabs-container">
-                <button class="tabs">MOUNTAIN 1</button>
-                <button class="tabs">MOUNTAIN 2</button>
+                <button class="tabs selected-tab" onclick="change_mountain('mountain1')">MOUNTAIN 1</button>
+                <button class="tabs" onclick="change_mountain('mountain2')">MOUNTAIN 2</button>
             </div>
 
-            <div class="schedule-banner">
-                <div class="schedules" id="mountain-1">
+            <div class="schedule-banner mountain_background-1">
+                <div class="schedules visibile" id="mountain-1">
                     <h2 class="schedule-title">Schedule</h2>
                     <div class="climb-date-container">
                         <p class="climb-date">25 Nov 2016</p>
@@ -118,7 +113,7 @@
                         <p>Vestibulum viverra</p>
                     </div>
                 </div>
-                <div class="schedules" id="mountain-2">
+                <div class="schedules invisible" id="mountain-2">
                     <h2 class="schedule-title">Schedule</h2>
                     <div class="climb-date-container">
                         <p class="climb-date">17 Nov 2016</p>
@@ -143,7 +138,7 @@
 
         <!-- ***** Footer ***** -->
         <footer role="contentinfo" class="footer">
-            <img src="" class="footer-logo">
+            <img src="images/Logo.png" class="footer-logo">
             <p>COPYRIGHT 2016. ALL RIGHTS RESERVED.</p>
         </footer>
         <script src="index.js"></script>

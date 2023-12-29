@@ -22,9 +22,8 @@
     --line-height-small: 1.2;
 
     --black: #2e2e2e;
-    --primary-color: #61759;
+    --primary-color: #394763;
     --white: #f0e9f2;
-    --white-1: #e5e5e6da;
 
 
     --container-max-width: 1180px;
@@ -56,4 +55,249 @@ html {
 body {
     font-size: var(--font-size-small);
     font-family: var(--font-text);
+    box-sizing: border-box;
+}
+
+/* --------------------------------------- */
+/* ----- Hero Section ----- */
+/* --------------------------------------- */
+
+.header{
+    height: 100vh;
+    width: 100%;
+    background: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    padding: var(--gutter-small) 20%;
+}
+
+.logo{
+    object-fit: contain;
+}
+
+.nav__items {
+    display: flex;
+    list-style: none;
+    padding: var(--gutter-normal) 0;
+    gap: var(--gutter-medium)
+}
+
+.nav__link{
+    color: var(--white);
+    font-family: var(--font-header);
+    font-style: italic;
+    font-size: var(--font-size-medium);
+}
+
+/* --------------------------------------- */
+/* ----- Sticky Nav ----- */
+/* --------------------------------------- */
+
+.primary-color{
+    color: var(--primary-color);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--white);
+  }
+
+.sticky-margin {
+    margin-top: 60px;
+  }
+
+/* --------------------------------------- */
+/* ----- History Section ----- */
+/* --------------------------------------- */
+
+.history{
+    height: 100vh;
+    width: 100%;
+    background: url(images/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#history-section-information{
+    display: flex;
+    flex-direction: column;
+    padding: var(--gutter-normal) 20%;
+    gap: var(--gutter-medium);
+    justify-content: center;
+    align-items: baseline;  
+}
+
+.carousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--gutter-small) 20%;
+    background-color: var(--primary-color);
+    gap: var(--gutter-small);
+}
+
+.carousel-images{
+    display: grid;
+    gap: var(--gutter-medium);
+    height: min-content;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.carousel-image{
+    width: 100%;
+}
+
+.carousel-buttons{
+    display: flex;
+    gap: var(--gutter-small);
+}
+
+.carousel-dots{
+    border: none;
+    background: var(--white);
+    font-size: large;
+    padding: var(--font-size-small);
+    cursor: pointer;
+}
+
+/* --------------------------------------- */
+/* ----- Mountain Section ----- */
+/* --------------------------------------- */
+
+.section-information{
+    display: flex;
+}
+
+.section-header{
+    display: flex;
+}
+
+.section-number{
+    font-family: var(--font-header);
+    font-size: calc(var(--font-size-huge)*2);
+    font-weight: 700;
+}
+
+.section-title{
+    font-family: var(--font-header);
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+}
+
+#team-section-information{
+    display: flex;
+    padding: var(--gutter-normal) 20%;
+    gap: var(--gutter-medium);
+    justify-content: center;
+    align-items: center;  
+}
+
+.tabs-container{
+    height: 5vh;
+    display: flex;
+    background-color: var(--primary-color);
+    gap: var(--gutter-normal);
+    padding-left: 20%;
+}
+
+.tabs{
+    font-family: var(--font-header);
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0 var(--gutter-small);
+}
+
+.selected-tab{
+    background-color: var(--white);
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.schedule-banner{
+    height: 80vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: var(--gutter-huge) 20%;
+}
+
+.mountain_background-1{
+    background-image: url(images/background3.png);
+}
+
+.mountain_background-2{
+    background-image: url(images/background4.png);
+}
+
+.schedules{
+    background-color: var(--white);
+    display:flex;
+    flex-direction: column;
+    width: fit-content;
+    height: min-content;
+    padding: var(--gutter-small) var(--gutter-normal);
+    gap: var(--gutter-normal);
+}
+
+.schedule-title{
+    font-family: var(--font-header);
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.climb-date-container{
+    display: flex;
+    gap: var(--gutter-normal);
+    justify-content: space-between;
+}
+
+/* --------------------------------------- */
+/* ----- Footer Section ----- */
+/* --------------------------------------- */
+
+.footer{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--gutter-normal);
+    color: #7f8ba2;
+    font-family: var(--font-header);
+    font-size: larger;
+}
+
+/* --------------------------------------- */
+/* ----- Utility Section ----- */
+/* --------------------------------------- */
+
+.visible{
+    display: auto;
+}
+
+.invisible{
+    display: none;
 }
